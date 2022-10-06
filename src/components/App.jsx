@@ -1,18 +1,25 @@
 import { ThemeProvider } from 'styled-components'
 import { theme } from 'theme/theme';
 
-import user from 'data/user.json'
+import user from 'data/user.json';
+import data from 'data/statistics.json';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions.json'
+
 import { Container } from './Container/Container';
 import { ProfileBox } from './Profile/ProfileBox/ProfileBox';
 import { ProfileData } from './Profile/ProfileData/ProfileData';
+import { Statistics } from './Statistics/Statistics';
+import { FriendsList } from './FriendList/FriendsList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
-export const { username, tag, location, avatar, stats: { followers, views, likes } } = user;
+const { username, tag, location, avatar, stats: { followers, views, likes } } = user;
 
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Container display="flex" justifyContent="center" padding="3">
-    <ProfileBox bg='profileBg' width='profileCardWidth' textAlign="center" boxShadow="profileShadow">
+      <Container display="flex" flexDirection="column" alignItems="center" padding="3">
+    <ProfileBox bg='profileBg' width='BoxWidth' textAlign="center" boxShadow="profileShadow">
         <ProfileData
           username={username}
           tag={tag}
@@ -22,22 +29,11 @@ export const App = () => {
           views={views}
           likes={likes} />
         </ProfileBox>
+          <Statistics title="Upload stats" stats={data} />
+        <Statistics stats={data} />
+        <FriendsList friends={friends} />
+        <TransactionHistory transactions={transactions}/>
         </Container>
   </ThemeProvider>
   )
 };
-
-  
-  
-  /* <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div> */

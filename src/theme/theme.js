@@ -3,8 +3,13 @@ export const theme = {
     profileBg: 'white',
     profileItemsBg: '#F8F9F9',
 
+    statsBg: 'white',
+    friendsListBg: 'white',
     primaryTextColor: 'black',
-      secondaryTextColor: 'gray',
+    secondaryTextColor: 'gray',
+      
+    statusOnline: 'green',
+    statusOffline: 'red'
     },
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -16,7 +21,7 @@ export const theme = {
   ],
   space:[0, 4, 8, 16, 32, 64, 128, 256, 512],
     sizes: {
-      profileCardWidth: 300
+      BoxWidth: 300
   },
   fontWeights: {
     body: 400,
