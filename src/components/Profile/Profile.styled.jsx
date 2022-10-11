@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+
+export const Profile = styled.div`
+    background-color: ${p => p.theme.colors.profileItemsBg};
+    width: ${p => p.theme.sizes.boxWidth};
+    text-align: center;
+    box-shadow: ${p => p.theme.shadows.profileShadow};
+`
 export const Description = styled.div`
  padding: ${p => p.theme.space[3]}px;
 `

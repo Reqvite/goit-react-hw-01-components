@@ -7,8 +7,7 @@ import friends from 'data/friends.json';
 import transactions from 'data/transactions.json'
 
 import { Container } from './Container/Container';
-import { ProfileBox } from './Profile/ProfileBox/ProfileBox';
-import { ProfileData } from './Profile/ProfileData/ProfileData';
+import { ProfileData } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendsList } from './FriendList/FriendsList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
@@ -19,7 +18,6 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container display="flex" flexDirection="column" alignItems="center" padding="3">
-    <ProfileBox bg='profileBg' width='BoxWidth' textAlign="center" boxShadow="profileShadow">
         <ProfileData
           username={username}
           tag={tag}
@@ -28,7 +26,6 @@ export const App = () => {
           followers={followers}
           views={views}
           likes={likes} />
-        </ProfileBox>
           <Statistics title="Upload stats" stats={data} />
         <Statistics stats={data} />
         <FriendsList friends={friends} />
