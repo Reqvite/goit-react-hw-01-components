@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components'
 import { theme } from 'theme/theme';
 
+
 import user from 'data/user.json';
 import data from 'data/statistics.json';
 import friends from 'data/friends.json';
